@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<link rel="stylesheet" type="text/css" href="/Users/mthuw/Documents/GitHub/ThuLe/styles.css">
+<script>
+  function submitForm(event) {
+    // Get values from form fields
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var question = document.getElementById("question").value;
+    
+    // Simple validation
+    if (name === "" || email === "" || question === "") {
+      alert("Please fill in all fields!");
+      return false;
+    }
+
+    // Hide the form
+    document.getElementById("contactForm").style.display = 'none';
+
+    // Display a thank-you message
+    var thankYouMessage = document.createElement("p");
+    thankYouMessage.textContent = "Thank you for your question. I will get back to you soon!";
+    thankYouMessage.style.fontSize = "20px";
+    thankYouMessage.style.color = "white";
+    thankYouMessage.style.textAlign = "center";
+    document.getElementById("thankYouMessageContainer").appendChild(thankYouMessage);
+
+    // Prevent form submission and page reload
+    event.preventDefault();
+  }
+</script>
+</head>
+  
+<body>
+  <nav id="tabline">
+    <a href="index.html" class="tab">HOME</a>
+    <a href="aboutme.html" class="tab">ABOUT ME</a>
+    <a href="projects.html"class="tab">MY PROJECTS</a>
+  </nav>
+
+  <header>
+    <h1 id="booktitle" style="color: #844e6b; font-family: Georgia, 'Times New Roman', Times, serif;">Thu Le</h1>
+  </header>
+  <h2 style="color:darkred;">👋 Hey guys!</h2>
+  <p class="welcome-message">Welcome to <b style="color:#e57b82;">Thu</b>'s website, we hope you will have great time checking out my website. 
+    I will tell you a bit about myself and what projects I did for my classes in this website. I hope you enjoy it!</p>
+  
+  <img src="https://static1.cbrimages.com/wordpress/wp-content/uploads/2020/07/whisper-of-the-heart-shizuku-studying.jpg?q=70&fit=crop&w=750&h=422&dpr=1" alt="ghibliphot" style="width:700px; display: block; margin: 0 auto;">
+  <h2>About This Website</h2>
+  <div class="mycontainer">
+  <h3>Description for each tab of the website</h3>
+  <ol>
+    <li>Home page with the summary of other pages</li>
+    <li>Introduce a little bit about myself</li>
+    <li>About the projects I did, including coding and non-coding projects</li>
+    <li>Student F-1 Visa</li>
+    </ol> 
+  </div>
+
+  
+    <hr>
+  
+  <h2>Projects & Tools I Used</h2>
+  <div class="mycontainer">
+  <h3>Here are some of the projects that I did.</h3>
+  <table id="dining">
+    <tr>
+      <th>Project</th>
+      <th>Category</th>
+      <th>Tools/Programming Language</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td>US Election Interective Visualization Website</td>
+      <td>Coding Project</td>
+      <td>RShiny, ggplot2, tidyverse, dplyr</td>
+      <td>Create a website using RShiny package in RStudio to display a visualizations of US Election throughout 1900s-2020</td>
+    </tr>
+    <tr>
+      <td>Sephora Website</td>
+      <td>Coding Project</td>
+      <td>Java, MySQL, JDBC</td>
+      <td>Create a User Interface using Sephora Website data that allows users to search, sort, save, and retreived saved products</td>
+    </tr>
+    <tr>
+      <td>New Students Welcoming Postings</td>
+      <td>Non-Coding Project</td>
+      <td>iBis Paint, Photoshop</td>
+      <td>Design posting about everything that new students should know before coming to school</td>
+    </tr>
+    <tr>
+      <td>Activity Tracking Sensor Analysis (Time Series)</td>
+      <td>Coding Project</td>
+      <td>Python, Sci-kit Learn, Pandas, Numpy</td>
+      <td>...</td>
+    </tr>
+  </table>
+  </div>
+  <hr>
+
+<div id="contact-form">
+  <h2>Have any questions? Reach out to me!</h2>
+  <form id="contactForm" onsubmit="submitForm(event)">
+    <label for="name">Your Name:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="email">Your Email:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="question">Your Question:</label><br>
+    <textarea id="question" name="question" rows="4" required></textarea><br><br>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+<div id="thankYouMessageContainer"></div>
+  
+  <div id="socialmedia">
+  <h2 style="text-align:center;color: #f09a91">Find more on social media</h2>
+    <div id="socialmini">
+  <a id="media1" href="https://www.facebook.com/MiamiUniversity/">Facebook</a>
+  <a id="media2" href="https://www.instagram.com/miamiuniversity/?hl=en">Instagram</a>
+  <a id="media3" href="https://www.instagram.com/miamiuniversity/?hl=en">X (Twitter)</a>
+    </div>
+  </div>
+  
+  <footer>
+    <p><b>Thu Le</b> | Oxford, Ohio | © 2025 All Rights Reserved</p>  
+  </footer>
+</body>
+</html>

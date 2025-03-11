@@ -1,0 +1,186 @@
+/* Setting the header for first line */
+#booktitle {
+    color: #cd7d88;
+    font-family: georgia, sans-serif;
+  }
+  
+  /* "Love and Honor" */
+  #slogan {
+    font-size:25px;
+    text-align: center; 
+    color: #87abc5;
+  }
+  
+  body {
+    background-color:#E7B5AC;
+    font-family: georgia, sans-serif
+  }
+  
+  .welcome-message {
+    background-color: #f9ece6;
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+  }
+  
+  h1 {
+        color: darkred;
+        text-align: center; 
+        margin-top: 20px;
+      }
+  
+  h2 {
+    font-size:20px;
+    color:darkred;
+    margin-left: 10px;
+  }
+  
+  h3 {
+    margin-left: 20px;
+    font-size: 16px;
+    color: #5c6268;
+  }
+  
+  table, th, td {
+        border:1px solid black;
+        border-collapse: collapse;
+      }
+  th, td {
+        padding: 8px;
+      }
+  
+  #dining tr:hover {
+    background-color: #9ca5ac;
+  }
+  
+  #dining th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #588061;
+    color: #093720;
+  }
+  
+  ul {
+    list-style: circle;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #bdd1b2;
+  }
+  
+  tr:nth-child(odd) {
+    background-color: #869F77;
+  }
+  
+  .mycontainer {
+    background-color: #F9E0DB;
+    padding: 20px;
+  }
+  
+  .mycontainer div {
+    width: 30%;
+    display: inline-block;
+    padding-left: 10px;
+  }
+  .mycontainer #div2 {
+    border-left-style:solid;
+  }
+  
+  a:hover {
+    color: #c4ab66;
+  }
+  
+  a:link {
+    text-decoration: none;
+  }
+  
+  #media1:link, #media1:visited {
+    background-color: #316FF6;
+    border-radius: 10px;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  #media2:link, #media2:visited {
+    background-color: #d62976;
+    border-radius: 10px;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  #media3:link, #media3:visited {
+    background-color: black;
+    border-radius: 10px;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  #media1:hover, #media2:hover, #media3:hover {
+    background-color: gray;
+  }
+  
+  #socialmedia {
+    padding: 15px;
+  }
+  
+  #socialmini {
+    margin-left: 36.5%;
+    padding-bottom:15px
+  }
+  
+  footer {
+    background-color: #FDE9EA;
+    color: #32465b;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+  }
+
+  #tabline {
+    background-color: #869F77;
+    padding: 10px;
+  }
+
+  .tab {
+    color: #1d5838;
+    padding: 15px 25px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+  }
+
+  a:hover {
+    color: #c4ab66;
+    background-color: #588061;
+  }
+
+  #me {
+    font-size: 18px;
+    color: #FDE9EA;
+    padding: 10px;
+  }
+
+  #me p {
+    padding: 15px;
+  }
+
+  .container {
+    display: flex;
+  }
+  
+  .item {
+    display: inline-block;  /* Makes the image a block-level element */
+    margin-left: auto; /* Automatic margin on the left */
+    margin-right: auto; /* Automatic margin on the right */
+    background-color: #FDE9EA;
+  }

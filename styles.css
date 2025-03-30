@@ -1,12 +1,12 @@
 /* Setting the header for first line */
 #booktitle {
     color: #cd7d88;
-    font-family: georgia, sans-serif;
+    font-family: Arial, Helvetica, sans-serif, sans-serif;
   }
   
   body {
     background-color:#E7B5AC;
-    font-family: georgia, sans-serif
+    font-family: Arial, Helvetica, sans-serif, sans-serif;
   }
   
   .welcome-message {

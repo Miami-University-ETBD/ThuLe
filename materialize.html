@@ -8,16 +8,16 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
    <style>
        .header-bg {
-           background-color: #f8bbd0; /* Light pink background */
+           background-color: #E7B5AC; /* Light pink background */
        }
        .section-bg {
-           background-color: #fff3e0; /* Light orange background */
+           background-color: #F9E0DB; /* Light pink background */
        }
        .shadow {
            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
        }
        .table-header {
-           background-color: #ffab91; /* Light red background */
+           background-color: #869F77; /* Light green background */
            color: white;
        }
    </style>
@@ -44,7 +44,7 @@
    <!-- Header Section -->
    <div class="section header-bg center-align">
        <h1 class="white-text">Welcome to Viet Nam Travel Guide</h1>
-       <p class="white-text">How to spend day(s) in Viet Nam</p>
+       <p class="white-text">You've made it to this page! Here's how to spend day(s) in Viet Nam 🇻🇳</p>
    </div>
 
 
@@ -55,7 +55,7 @@
                <div class="col s12 m6">
               
                    <h2>About Us</h2>
-                   <p>Hello, it's Thu. As I introduced, I am international student from Ho Chi Minh city, Viet Nam. About Viet Nam, it's a beautiful country 
+                   <p>Hello, it's Thu. As I introduced, I am international student from Ho Chi Minh city, Viet Nam 🇻🇳. About Viet Nam, it's a beautiful country 
                     in the Southest Asia, a country of rich traditions, breathtaking landscapes, and delicious cuisine. 
                     In this page, I will give you some recommendations of what to do in Viet Nam. 
                    </p>
@@ -71,7 +71,7 @@
    <!-- Menu Section -->
    <div id="menu" class="section">
        <div class="container">
-           <h2>The Most Famous Cities</h2>
+           <h2 class="red-text text-lighten-2">The Most Famous Cities</h2>
            <table class="highlight">
                <thead class="table-header">
                    <tr>
@@ -84,7 +84,7 @@
                    <tr>
                        <td>Ho Chi Minh city (Sai Gon)</td>
                        <td>A bustling metropolis where modern skyscrapers meet vibrant street markets and rich history.</td>
-                       <td>City's Post Office, Nguyen Hue walking street, Independence Palace</td>
+                       <td>City's Post Office, Nguyen Hue walking street, Independence Palace, Ben Thanh market</td>
                    </tr>
                    <tr>
                        <td>Ha Noi</td>
@@ -106,7 +106,7 @@
        </div>
    </div>
    <div class="row">
-    <h2>Top Attractions</h2>
+    <h2 class="red-text text-lighten-2">Top Attractions</h2>
 
        <div class="col s4">
            <img src="https://lp-cms-production.imgix.net/2023-10/GettyRF92865967.jpg?auto=format,compress&q=72&w=1440&h=810&fit=crop" alt="Bakery Image" class="responsive-img shadow">
@@ -121,15 +121,27 @@
            <blockquote>Phong Nha Ke Bang Cave</blockquote>
        </div>
       </div>
+
+      <div class="row">
+        <h2 class="red-text text-lighten-2">Travel Tips</h2>
+        <p>Since I was born and raised in Viet Nam, I might not fully understand all the concerns that tourists have when they come to
+            Viet Nam. So, hopefully this video will give you all the information you need before coming to Viet Nam!
+        </p>
+      <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/2PtXC_5qKTw?si=kHfDbCfN6uQg2oSk" title="YouTube video player" 
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
    <!-- Contact Section -->
    <div id="contact" class="section section-bg">
        <div class="container">
            <h2>Contact Us</h2>
            <div class="row">
-            <div class="col s12 m6">
-                <img src="images/sakura.png" alt="Sakura Photo" class="circle" style="max-width: 30%;">
+            <div class="col s12 m4">
+                <img src="images/sakura.png" alt="Sakura Photo" class="circle" style="max-width: 70%;">
             </div>
-               <div class="col s12 m6">
+               <div class="col s12 m4">
                    <form>
                        <div class="input-field">
                            <input id="name" type="text" class="validate">
@@ -146,7 +158,7 @@
                        <button type="submit" class="btn waves-effect waves-light">Send</button>
                    </form>
                </div>
-               <div class="col s12 m6">
+               <div class="col s12 m4">
                    <h5>Visit Us</h5>
                    <p>401 E High St,<br> Oxford, OH 45056</p>
                    <p><i class="material-icons">phone</i> (945) 209-1575</p>

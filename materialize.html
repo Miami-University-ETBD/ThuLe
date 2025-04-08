@@ -5,6 +5,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Bakery Delight</title>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
    <style>
        .header-bg {
@@ -134,35 +135,9 @@
       </div>
     </div>
 
-    <div id="radio-section" class="section container">
-        <h2>Select Your Favorite Pastry</h2>
-        <form>
-            <p>
-                <label>
-                    <input name="pastry" type="radio" value="Croissant" onclick="displayPastry()"/>
-                    <span>Croissant</span>
-                </label>
-            </p>
-            <p>
-                <label>
-                    <input name="pastry" type="radio" value="Muffin" onclick="displayPastry()"/>
-                    <span>Muffin</span>
-                </label>
-            </p>
-            <p>
-                <label>
-                    <input name="pastry" type="radio" value="Donut" onclick="displayPastry()"/>
-                    <span>Donut</span>
-                </label>
-            </p>
-        </form>
-        <div id="pastry-response"></div>
-    </div>
-
-
     <!-- Carousel -->
     <div id="carousel" class="carousel carousel-slider">
-        <h2>Vietnamese Dishes</h2>
+        <h2 class="red-text text-lighten-2">Vietnamese Dishes</h2>
         <div class="carousel">
             <a class="carousel-item" href="#one!"><img src="images/pho.jpeg"></a>
             <a class="carousel-item" href="#two!"><img src="images/miquang.jpg"></a>
@@ -175,9 +150,9 @@
 
     <!-- Collapsible -->
     <ul class="collapsible">
-        <li>
-          <div class="collapsible-header"><i class="material-icons">Pho</i></div>
-          <div class="collapsible-body"><span>Pho is a beloved Vietnamese noodle soup, characterized by 
+        <li class="active">
+          <div class="collapsible-header"><i class="material-icons">help</i>Pho</div>
+          <div class="collapsible-body"><span><i>Pho</i> is a beloved Vietnamese noodle soup, characterized by 
             its fragrant and flavorful broth, typically simmered for hours with aromatic spices and beef 
             bones. This savory base is then poured over soft rice noodles and thinly sliced meat, often 
             beef, which cooks gently in the hot broth. Garnished with fresh herbs like cilantro, mint, and 
@@ -185,20 +160,39 @@
             deeply satisfying culinary experience that is considered Vietnam's national dish.</span></div>
         </li>
         <li>
-          <div class="collapsible-header"><i class="material-icons">Mi Quang</i></div>
-          <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+          <div class="collapsible-header"><i class="material-icons">help</i>Mi Quang</div>
+          <div class="collapsible-body"><span><i>Mi Quang</i> is a vibrant and flavorful noodle dish hailing from the 
+            Quang Nam province in central Vietnam. Broad, turmeric-infused rice noodles form the base, topped 
+            with a rich, often scant, broth that is intensely flavored with shrimp, pork, and sometimes chicken. 
+            Peanuts, crispy rice crackers (banh trang me), fresh herbs like mint and basil, and a squeeze of lime 
+            are essential garnishes, contributing to the dish's unique textures and a delightful interplay of savory, 
+            sweet, and nutty notes.</span></div>
         </li>
         <li>
-          <div class="collapsible-header"><i class="material-icons">Bun Bo Hue</i></div>
-          <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+          <div class="collapsible-header"><i class="material-icons">help</i>Bun Bo Hue</div>
+          <div class="collapsible-body"><span><i>Bun Bo Hue</i> is a robust and spicy Vietnamese 
+            noodle soup originating from the city of Hue. Its flavorful broth, simmered with 
+            beef bones, lemongrass, and fermented shrimp paste, distinguishes it from pho with 
+            a bolder and more intense taste. Served with thick rice vermicelli noodles, slices 
+            of beef shank, pork knuckles, and sometimes congealed pig's blood, Bun Bo Hue is 
+            typically garnished with fresh herbs like mint and cilantro, along with banana blossoms 
+            and lime wedges, offering a complex and deeply satisfying culinary experience.</span></div>
         </li>
         <li>
-            <div class="collapsible-header"><i class="material-icons">Banh Mi</i></div>
-            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+            <div class="collapsible-header"><i class="material-icons">help</i>Bun Bo Hue</div>
+            <div class="collapsible-body"><span><i>Banh Mi</i> is a vibrant Vietnamese sandwich typically served 
+                on a toasted baguette with a thin, crisp crust and soft interior. It's filled with a savory 
+                combination of meats, such as grilled pork, pate, or cold cuts, along with pickled vegetables 
+                like carrots and daikon, fresh cilantro, cucumber slices, and often a smear of spicy mayonnaise 
+                or chili sauce, creating a delightful balance of textures and flavors.</span></div>
           </li>
           <li>
-            <div class="collapsible-header"><i class="material-icons">Banh Cuon</i></div>
-            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+            <div class="collapsible-header"><i class="material-icons">help</i>Banh Cuon</div>
+            <div class="collapsible-body"><span><i>Banh Cuon</i> is a delicate Vietnamese dish featuring thin, 
+                steamed rice flour rolls filled with a savory mixture of ground pork and wood ear mushrooms. 
+                These silky and slightly chewy rolls are typically topped with crispy fried shallots and often 
+                served alongside Vietnamese pork sausage (cha lua), fresh bean sprouts, and a flavorful dipping 
+                sauce called nuoc cham, making for a light yet satisfying meal or snack.</span></div>
           </li>
       </ul>
 
@@ -250,46 +244,21 @@
    </footer>
 
    <script>
-    // Initialize modal
-    document.addEventListener('DOMContentLoaded', function() {
-        var elems = document.querySelectorAll('.modal');
-        var instances = M.Modal.init(elems);
-    });
-
+    // Initialize carousel
     document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.carousel');
-    var instances = M.Carousel.init(elems, {
+    var options = {
         fullWidth: true, // Optional: Makes it full-width
         indicators: true, // Optional: Adds navigation dots
         noWrap: true
-    });
+    }
+    var instances = M.Carousel.init(elems, options);
 });
 
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.collapsible');
     var instances = M.Collapsible.init(elems);
   });
-
-
-    // Function to display selected pastry
-    function displayPastry() {
-        const selectedPastry = document.querySelector('input[name="pastry"]:checked').value;
-        document.getElementById('pastry-response').innerText = `You selected: ${selectedPastry}`;
-    }
-    // Function to handle email subscription form submission
-    function submitEmail(event) {
-        event.preventDefault();
-        const email = document.getElementById('email').value;
-        document.getElementById('email-response').innerText = `Thank you for subscribing! Updates will be sent to: ${email}`;
-        document.getElementById('email').value = ''; // Clear the input
-
-
-        // Display modal
-        const modalText = document.getElementById('modal-content-text');
-        modalText.innerText = `Thank you for subscribing! Updates will be sent to: ${email}`;
-        const modal = M.Modal.getInstance(document.getElementById('modal1'));
-        modal.open();
-    }
 </script>
 </body>
 </html>

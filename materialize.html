@@ -1,9 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<style>
+    .btn {
+        background-color: rgb(242, 177, 36) !important; /* Use !important to override other potential styles */
+    }
+    
+    .waves-effect.waves-light .waves-ripple {
+        background-color: rgb(242, 177, 36);
+    }
+</style>
+
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Bakery Delight</title>
+   <title>Vietnam Tour Guide</title>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -123,7 +134,7 @@
        </div>
       </div>
 
-      <div class="row">
+      <div class="section container">
         <h2 class="red-text text-lighten-2">Travel Tips</h2>
         <p>Since I was born and raised in Viet Nam, I might not fully understand all the concerns that tourists have when they come to
             Viet Nam. So, hopefully this video will give you all the information you need before coming to Viet Nam!
@@ -136,19 +147,21 @@
     </div>
 
     <!-- Carousel -->
-    <div id="carousel" class="carousel carousel-slider">
-        <h2 class="red-text text-lighten-2">Vietnamese Dishes</h2>
-        <div class="carousel">
-            <a class="carousel-item" href="#one!"><img src="images/pho.jpeg"></a>
-            <a class="carousel-item" href="#two!"><img src="images/miquang.jpg"></a>
-            <a class="carousel-item" href="#three!"><img src="images/bunboa.jpeg"></a>
-            <a class="carousel-item" href="#four!"><img src="images/banhmi.png"></a>
-            <a class="carousel-item" href="#five!"><img src="images/banhcuon.png"></a>
-          </div>
+    <div id="carousel" class="section container">
+        <div class="carousel carousel-slider">
+            <h2 class="red-text text-lighten-2">Vietnamese Dishes</h2>
+            <div class="carousel">
+                <a class="carousel-item" href="#one!"><img src="images/pho.jpeg"></a>
+                <a class="carousel-item" href="#two!"><img src="images/miquang.jpg"></a>
+                <a class="carousel-item" href="#three!"><img src="images/bunboa.jpeg"></a>
+                <a class="carousel-item" href="#four!"><img src="images/banhmi.png"></a>
+                <a class="carousel-item" href="#five!"><img src="images/banhcuon.png"></a>
+            </div>
       </div>
-    </div>
+    
 
     <!-- Collapsible -->
+    <h4 class="red-text text-lighten-3">Dish Descriptions</h4>
     <ul class="collapsible">
         <li class="active">
           <div class="collapsible-header"><i class="material-icons">help</i>Pho</div>
@@ -195,6 +208,70 @@
                 sauce called nuoc cham, making for a light yet satisfying meal or snack.</span></div>
           </li>
       </ul>
+    </div>
+
+      <div id="radio-section" class="section container">
+        <h2 class="red-text text-lighten-2">Select Your Favorite Vietnamese Dish</h2>
+        <form>
+            <p>
+                <label>
+                    <input name="dish" type="radio" value="Pho" onclick="displayDish()"/>
+                    <span>Pho</span>
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input name="dish" type="radio" value="Banh Mi" onclick="displayDish()"/>
+                    <span>Banh Mi</span>
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input name="dish" type="radio" value="Banh Cuon" onclick="displayDish()"/>
+                    <span>Banh Cuon</span>
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input name="dish" type="radio" value="Bun Bo Hue" onclick="displayDish()"/>
+                    <span>Bun Bo Hue</span>
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input name="dish" type="radio" value="Mi Quang" onclick="displayDish()"/>
+                    <span>Mi Quang</span>
+                </label>
+            </p>
+        </form>
+        <div id="pastry-response"></div>
+    </div>
+
+
+    <!-- Email Feedback Section -->
+   <div id="feedback-section" class="section container">
+    <h2 class="red-text text-lighten-2">Subscribe for Updates</h2>
+    <form onsubmit="submitEmail(event)">
+        <div class="input-field">
+            <input id="email" type="email" required>
+            <label for="email">Email</label>
+        </div>
+        <button type="submit" class="btn waves-effect waves-green">Subscribe</button>
+    </form>
+    <div id="email-response"></div>
+</div>
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <h4>Check Your email-response</h4>
+    <p id="modal-content-text"></p>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class="modal-close waves-effect waves-green btn-flat"
+      >Close</a
+    >
+  </div>
+</div>
+
 
    <!-- Contact Section -->
    <div id="contact" class="section section-bg">
@@ -218,7 +295,7 @@
                            <textarea id="message" class="materialize-textarea"></textarea>
                            <label for="message">Message</label>
                        </div>
-                       <button type="submit" class="btn waves-effect waves-light">Send</button>
+                       <button type="submit" class="btn waves-effect waves-green waves-ripple">Send</button>
                    </form>
                </div>
                <div class="col s12 m4">
@@ -255,10 +332,43 @@
     var instances = M.Carousel.init(elems, options);
 });
 
+// Initialize collapsible
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.collapsible');
-    var instances = M.Collapsible.init(elems);
+    var options = {
+        inDuration: 400, // set the speed, default is 300 miliseconds
+        outDuration: 400
+    }
+    var instances = M.Collapsible.init(elems, options);
   });
+
+        // Initialize modal
+        document.addEventListener('DOMContentLoaded', function() {
+           var elems = document.querySelectorAll('.modal');
+           var instances = M.Modal.init(elems);
+       });
+
+
+       // Function to display selected dish
+       function displayDish() {
+           const selectedDish = document.querySelector('input[name="dish"]:checked').value;
+           document.getElementById('dish-response').innerText = `You selected: ${selectedDish}`;
+       }
+       // Function to handle email subscription form submission
+       function submitEmail(event) {
+           event.preventDefault();
+           const email = document.getElementById('email').value;
+           document.getElementById('email-response').innerText = `Thank you for subscribing! Updates will be sent to: ${email}`;
+           document.getElementById('email').value = ''; // Clear the input
+
+
+           // Display modal
+           const modalText = document.getElementById('modal-content-text');
+           modalText.innerText = `Thank you for subscribing! Updates will be sent to: ${email}`;
+           const modal = M.Modal.getInstance(document.getElementById('modal1'));
+           modal.open();
+       }
+
 </script>
 </body>
 </html>

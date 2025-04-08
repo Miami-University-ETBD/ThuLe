@@ -178,7 +178,5 @@
     background-color: #FDE9EA;
   }
 
-  document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.carousel');
-    var instances = M.Carousel.init(elems, options);
-  });
+ 
+

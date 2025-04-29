@@ -34,7 +34,6 @@
         color: #ce6b8a;
         text-align: center; 
         margin-top: 20px;
-        padding: 10px;
         font-size: 60px;
       }
 
@@ -92,6 +91,11 @@
     margin-left: 35%;
     font-size: 20px;
   }  
+
+  .resume {
+    display: block;
+    margin-left: 20px;
+  }
 
   #small-group {
     display: flex;

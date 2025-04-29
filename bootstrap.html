@@ -9,52 +9,57 @@
             rel="stylesheet">
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <style>
+            body {
+                background-color:#efd9e2;
+                font-family: Arial, Helvetica, sans-serif, sans-serif;
+            }
+
+            #tabline {
+                background-color: #eebbc4;
+                padding: 10px;
+            }
+
+            .tab {
+                color: #f2f1f2;
+                padding: 15px 25px;
+                text-decoration: none;
+                display: inline-block;
+                font-weight: bold;
+            }
+
+            header {
+                background-color: #eebbc4;
+                text-align: center; 
+                padding: 10px;
+            }
+
+            h1 {
+                color: #ce6b8a;
+                text-align: center; 
+                margin-top: 20px;
+                padding: 10px;
+                font-size: 60px;
+            }
+        </style>
     </head>
     <body>
 
-        <!-- Header Section -->
-        <div class="container-fluid p-5 bg-primary text-white text-center">
-            <h1>My First Bootstrap Page</h1>
-            <p>Resize this responsive page to see the effect!</p>
-        </div>
+        <!-- Navbar -->
+        <nav id="tabline">
+            <a href="index.html" class="tab">HOME</a>
+            <a href="aboutme.html" class="tab">ABOUT ME</a>
+            <a href="projects.html"class="tab">MY PROJECTS</a>
+            <a href="materialize.html"class="tab">MATERIALIZE</a>
+            <a href="bonus.html"class="tab">VIETNAM PLACES</a>
+            <a href="jquery.html"class="tab">JQUERY</a>
+            <a href="bootstrap.html"class="tab">BOOTSTRAP</a>
+          </nav>
 
-        <!-- Navbar with Dropdown -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">MySite</a>
-                <button class="navbar-toggler" type="button"
-                    data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page"
-                                href="#">Home</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#"
-                                id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Services
-                            </a>
-                            <ul class="dropdown-menu"
-                                aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Web
-                                        Design</a></li>
-                                <li><a class="dropdown-item"
-                                        href="#">SEO</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item"
-                                        href="#">Contact</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        <!-- Header Section -->
+        <header>
+            <h1>My First Bootstrap Page</h1>
+        </header>
 
         <!-- Accordion -->
         <div class="container mt-5">
@@ -159,5 +164,8 @@
             </div>
         </div>
 
+    <footer>
+        <p><b>Thu Le</b> | Oxford, Ohio | © 2025 All Rights Reserved</p>  
+        </footer>
     </body>
 </html>

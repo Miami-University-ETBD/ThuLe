@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-<link rel="stylesheet" type="text/css" href="/Users/mthuw/Documents/GitHub/ThuLe/styles.css">
+<link rel="stylesheet" href="styles.css">
 <script>
   function submitForm(event) {
     // Get values from form fields
@@ -12,7 +12,7 @@
     
     // Simple validation
     if (name === "" || email === "" || question === "") {
-      alert("Please fill in all fields!");
+      alert("Please fill in all fields!!! hehehe");
       return false;
     }
 
@@ -23,7 +23,7 @@
     var thankYouMessage = document.createElement("p");
     thankYouMessage.textContent = "Thank you for your question. I will get back to you soon!";
     thankYouMessage.style.fontSize = "20px";
-    thankYouMessage.style.color = "white";
+    thankYouMessage.style.color = "#588061";
     thankYouMessage.style.textAlign = "center";
     document.getElementById("thankYouMessageContainer").appendChild(thankYouMessage);
 
@@ -34,36 +34,51 @@
 </head>
   
 <body>
+
   <nav id="tabline">
     <a href="index.html" class="tab">HOME</a>
     <a href="aboutme.html" class="tab">ABOUT ME</a>
     <a href="projects.html"class="tab">MY PROJECTS</a>
+    <a href="materialize.html"class="tab">MATERIALIZE</a>
+    <a href="bonus.html"class="tab">VIETNAM PLACES</a>
+    <a href="jquery.html"class="tab">JQUERY</a>
+    <a href="bootstrap.html"class="tab">BOOTSTRAP</a>
   </nav>
 
+  <!-- Header Section -->
   <header>
-    <h1 id="booktitle" style="color: #844e6b; font-family: Georgia, 'Times New Roman', Times, serif;">Thu Le</h1>
+    <h1 id="booktitle">My Everything Website</h1>
+    <p style="font-size: 30px; color: white";>By Thu Le</p>
   </header>
-  <h2 style="color:darkred;">👋 Hey guys!</h2>
-  <p class="welcome-message">Welcome to <b style="color:#e57b82;">Thu</b>'s website, we hope you will have great time checking out my website. 
-    I will tell you a bit about myself and what projects I did for my classes in this website. I hope you enjoy it!</p>
-  
-  <img src="https://static1.cbrimages.com/wordpress/wp-content/uploads/2020/07/whisper-of-the-heart-shizuku-studying.jpg?q=70&fit=crop&w=750&h=422&dpr=1" alt="ghibliphot" style="width:700px; display: block; margin: 0 auto;">
+
+  <div class="welcome-message">
+  <img src="https://bloomreviewsblog.com/wp-content/uploads/2018/06/cardcaptor-sakura-anime-1079333-1280x0.jpeg" alt="ghibliphot" style="width:80%; display: block; margin: 0 auto;">
+  <span>
+  <h2 style="color:#463464;">👋 Hey guys!</h2>
+  <p>Welcome to <b style="color:#e57b82;">Thu</b>'s website, we hope you will have great time checking out my website. 
+    I will tell you a bit about myself and what projects I did for my classes in this website. Also, you really need to check out my the last page in
+    this website, Materialize. I'm not telling what is that about, you should check it out!!! I hope you enjoy my website!</p>
+  </div> 
+
+  <div class="center-container">
   <h2>About This Website</h2>
-  <div class="mycontainer">
   <h3>Description for each tab of the website</h3>
+  <div id="small-group">
+  <img src="images/floral-cute-books.png" alt="icon" style="width:300px;">
   <ol>
     <li>Home page with the summary of other pages</li>
-    <li>Introduce a little bit about myself</li>
+    <li>An About Me to introduce a little bit about myself</li>
     <li>About the projects I did, including coding and non-coding projects</li>
-    <li>Student F-1 Visa</li>
+    <li>A Materialize page for components from Materialize library</li>
+    <li>A Bootstrap page for components from Bootstrap library</li>
+    <li>A JQuery page for components from JQuery library</li>
     </ol> 
   </div>
-
-  
-    <hr>
+  </div>
+<br>
+<br>
   
   <h2>Projects & Tools I Used</h2>
-  <div class="mycontainer">
   <h3>Here are some of the projects that I did.</h3>
   <table id="dining">
     <tr>
@@ -97,11 +112,24 @@
       <td>...</td>
     </tr>
   </table>
-  </div>
-  <hr>
+ 
+<br>
+<br>
 
+<div id="socialmedia">
+  <h2 style="text-align: center;">Find more on social media</h2>
+    <div id="socialmini">
+  <a id="media1" href="https://www.facebook.com/MiamiUniversity/">Facebook</a>
+  <a id="media2" href="https://www.instagram.com/miamiuniversity/?hl=en">Instagram</a>
+  <a id="media3" href="https://www.instagram.com/miamiuniversity/?hl=en">X (Twitter)</a>
+    </div>
+  </div>
+
+<div style="background-color: #d1b0bd; padding: 10px;">
 <div id="contact-form">
   <h2>Have any questions? Reach out to me!</h2>
+  <div class="mycontainer"> 
+  <img src="images/mail.png" alt="mail-icon" style="width:300px;">
   <form id="contactForm" onsubmit="submitForm(event)">
     <label for="name">Your Name:</label><br>
     <input type="text" id="name" name="name" required><br><br>
@@ -115,18 +143,11 @@
     <input type="submit" value="Submit">
   </form>
 </div>
+</div>
+</div>
 
-<div id="thankYouMessageContainer"></div>
-  
-  <div id="socialmedia">
-  <h2 style="text-align:center;color: #f09a91">Find more on social media</h2>
-    <div id="socialmini">
-  <a id="media1" href="https://www.facebook.com/MiamiUniversity/">Facebook</a>
-  <a id="media2" href="https://www.instagram.com/miamiuniversity/?hl=en">Instagram</a>
-  <a id="media3" href="https://www.instagram.com/miamiuniversity/?hl=en">X (Twitter)</a>
-    </div>
-  </div>
-  
+<div id="thankYouMessageContainer" style="background-color:#F9E0DB;"></div> 
+
   <footer>
     <p><b>Thu Le</b> | Oxford, Ohio | © 2025 All Rights Reserved</p>  
   </footer>

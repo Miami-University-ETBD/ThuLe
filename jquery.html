@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<link rel="stylesheet" href="styles.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<script> 
+    $(document).ready(function(){
+    $(".panel").hide(); // Hide all panels initially
+    $(".flip").click(function(){
+        $(this).next(".panel").slideToggle("slow");
+    });
+    });
+    </script>
+
+<script>
+  $(document).ready(function(){
+    $("#btn2").click(function(){
+      if (!$("ol").text().includes("Xin Chào")) {
+      $("ol").append("<li>Xin Chào</li>");
+      }
+    });
+    $("#btn3").click(function(){
+      if (!$("ol").text().includes("Tạm Biệt")) {
+      $("ol").append("<li>Tạm Biệt</li>");
+      }
+    });
+    $("#btn4").click(function(){
+      if (!$("ol").text().includes("Tôi tên là...")) {
+      $("ol").append("<li>Tôi tên là...</li>");
+      }
+    });
+    $("#btn5").click(function(){
+      if (!$("ol").text().includes("Hôm nay bạn như thế nào?")) {
+      $("ol").append("<li>Hôm nay bạn như thế nào?</li>");
+      }
+    });
+    $("#btn6").click(function(){
+      if (!$("ol").text().includes("Tôi khoẻ")) {
+      $("ol").append("<li>Tôi khoẻ</li>");
+      }
+    });
+    $("#btn7").click(function(){
+      if (!$("ol").text().includes("Cám ơn")) {
+      $("ol").append("<li>Cám ơn</li>");
+      }
+    });
+  });
+  </script>
+
+  <script>
+    $(document).ready(function(){
+    $("#emptyBtn").click(function(){
+      $("ol").empty();
+    });
+  });
+</script>
+
+    <style> 
+    .panel, .flip {
+      padding: 5px;
+      text-align: center;
+      background-color: lavenderblush;
+      border: solid 1px #c3c3c3;
+    }
+    
+    .panel {
+      position: absolute;
+      display: none;
+    }
+
+
+    .flip {
+      position: relative;
+      width: 100%;
+    }
+
+    .flip, .panel {
+      display: block;
+      margin-bottom: 5px;
+    }
+    </style>
+
+<style>
+    div.mycontainer {
+    display:inline-block;
+    width:100%;
+    position: relative;
+    margin-bottom: 60px; /* space for sliding panel */
+    }
+
+    .mycontainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 150px;
+    }
+
+    .subclass {
+      width: fit-content;
+      margin: 10px;
+      text-align: center;
+    }
+
+    .subclass div {
+      display: block;
+    }
+
+    .subclass .flip {
+      width:100%;
+    }
+
+    .subclass .panel {
+      width:100%/3;
+      box-sizing: border-box;
+    }
+
+    div.mycontainer2 {
+      display: flex;
+      gap: 20px; /* optional: adds a gap between the two divs */
+    }
+    </style>
+<style>
+    button {
+      display: block;
+      margin: 10px;
+    }
+
+    #div1 h4 {
+      text-align: center;
+    }
+    </style>
+</head>
+  
+<body>
+  <nav id="tabline">
+    <a href="index.html" class="tab">HOME</a>
+    <a href="aboutme.html" class="tab">ABOUT ME</a>
+    <a href="projects.html"class="tab">MY PROJECTS</a>
+    <a href="materialize.html"class="tab">MATERIALIZE</a>
+    <a href="bonus.html"class="tab">VIETNAM PLACES</a>
+    <a href="jquery.html"class="tab">JQUERY</a>
+    <a href="bootstrap.html"class="tab">BOOTSTRAP</a>
+  </nav>
+
+  <header>
+    <h1>5-min Vietnamese</h1>
+  </header>
+  
+    <div class="mycontainer">
+    <div class="subclass">
+      <button id="btn2">Add to list</button>
+      <div id="first-word" class="flip">Xin Chào</div>
+      <div class="panel">Hello</div>
+    </div>
+
+    <div class="subclass">
+      <button id="btn3">Add to list</button>
+      <div class="flip">Tạm Biệt</div>
+      <div class="panel">Goodbye</div>
+    </div>
+
+    <div class="subclass">
+      <button id="btn4">Add to list</button>
+      <div class="flip">Tôi tên là...</div>
+      <div class="panel">My name is...</div>
+    </div>
+</div>
+
+<div class="mycontainer">
+  <div class="subclass">
+      <button id="btn5">Add to list</button>
+      <div class="flip">Hôm nay bạn như thế nào?</div>
+      <div class="panel">How are you today?</div>
+  </div>
+
+  <div class="subclass">
+      <button id="btn6">Add to list</button>
+      <div class="flip">Tôi khoẻ</div>
+      <div class="panel">I'm fine</div>
+  </div>
+
+  <div class="subclass">
+      <button id="btn7">Add to list</button>
+      <div class="flip">Cám ơn</div>
+      <div class="panel">Thank you</div>
+  </div>
+</div>
+
+<div class="mycontainer2">
+  <div>
+    <div id="div1" style="height:300px;width:300px;border:1px solid black;background-color:white;">
+      <h4>Learning List</h4>
+      <ol></ol> 
+    </div>
+    <button id="emptyBtn">Empty the list</button>
+  </div>
+
+  <div style="height:200px;padding:20px;border:1px solid black;background-color:#F9E0DB;">
+    <h3>Page Functionality</h3>
+    <ul>
+      <p>Cards Toggle: toggle the cards to see the English meanings of the words</p>
+      <p>Add to list button: add the words you want to save for learning to the list</p>
+      <p>Empty the list: remove all words in the list</p>
+    </ul>
+  </div>
+</div>
+
+  <div id="socialmedia">
+  <h2 style="text-align:center;color: #cd7d88">Find more on social media</h2>
+    <div id="socialmini">
+  <a id="media1" href="https://www.facebook.com/MiamiUniversity/">Facebook</a>
+  <a id="media2" href="https://www.instagram.com/miamiuniversity/?hl=en">Instagram</a>
+  <a id="media3" href="https://www.instagram.com/miamiuniversity/?hl=en">X (Twitter)</a>
+    </div>
+  </div>
+
+  <footer>
+    <p><b>Thu Le</b> | Oxford, Ohio | © 2025 All Rights Reserved</p>  
+  </footer>
+</body>
+</html>

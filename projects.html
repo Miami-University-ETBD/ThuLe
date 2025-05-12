@@ -2,37 +2,113 @@
 <html lang="en">
 
 <head>
-<link rel="stylesheet" type="text/css" href="/Users/mthuw/Documents/GitHub/ThuLe/styles.css">
+<link rel="stylesheet" href="styles.css">
   <script src="https://kit.fontawesome.com/dd85575d2e.js" crossorigin="anonymous"></script>
-  <title style="color: white; font-family: 'TAN-MON CHERI', 'Times New Roman', Times, serif;">Projects</title>  
+  <title style="color: white; font-family: Arial, Helvetica, sans-serif, sans-serif;">Projects</title>  
 </head>
   
 <body>
-  <div id="tabline">
-    <a class="tab">HOME</a>
-    <a class="tab">ABOUT ME</a>
-    <a class="tab">MY PROJECTS</a>
-      </div>
-    </div>  
+  <nav id="tabline">
+    <a href="index.html" class="tab">HOME</a>
+    <a href="aboutme.html" class="tab">ABOUT ME</a>
+    <a href="projects.html"class="tab">MY PROJECTS</a>
+    <a href="materialize.html"class="tab">MATERIALIZE</a>
+    <a href="bonus.html"class="tab">VIETNAM PLACES</a>
+    <a href="jquery.html"class="tab">JQUERY</a>
+    <a href="bootstrap.html"class="tab">BOOTSTRAP</a>
+  </nav>
   <header>
-    <h1 id="booktitle" style="color: #844e6b; font-family: Georgia, 'Times New Roman', Times, serif;">Thu Le</h1>
+    <h1 id="booktitle">My Projects</h1>
   </header>
-  <section class="proj"> 
-    <section class="item"> 
-        <img src="/Users/mthuw/Documents/GitHub/ThuLe/images/Screenshot 2024-05-12 at 22.15.23.png" alt="coding-project" style="width:300px;">
-        <h3>Coding Project</h3> 
-    </section>
-
-    <section class="item"> 
-        <img src="/Users/mthuw/Documents/GitHub/ThuLe/images/Screenshot 2025-03-03 at 23.31.09.png" alt="coding-project" style="width:300px;">
-        <h3>Non-Coding Project</h3> 
-    </section>
-</section>
   <hr>
   
+  <h2>My Resume</h2>
+  <div class="resume">
+    <h3>Check out my resume!</h3>
+    <p>Click this to check out my resume, not all my projects are in here but most of them will be there.</p>
+  <button id="showResumeButton">View Resume (PDF)</button>
+  </div>
+
+  <script>
+    document.getElementById("showResumeButton").addEventListener("click", function() {
+      window.open("images/HoangMinhThu_Le_rsm.pdf", "_blank");
+    });
+  </script>
+
+  <br>
+
+  <h2>Details on My Projects</h2>
+  <div class="coding_projects_table">
+    <h3>Here are some of the coding projects that I did.</h3>
+    <table id="dining">
+      <tr>
+        <th>Image</th>
+        <th>Project</th>
+        <th>Tools/Programming Language</th>
+        <th>Detail Description</th>
+      </tr>
+      <tr>
+        <td><img src="images/rshiny_project.png" alt="rshiny_project" style="width:300px;"></td>
+        <td>US Election Interective Visualization Website</td>
+        <td>RShiny, ggplot2, tidyverse, dplyr</td>
+        <td>Create a website using RShiny package in RStudio to display a visualizations of US Election throughout 1900s-2020</td>
+      </tr>
+      <tr>
+        <td><img src="images/sephorawebsite.png" alt="sephora-website" style="width:300px;"></td>
+        <td>Sephora Website</td>
+        <td>Java, MySQL, JDBC</td>
+        <td>Create a User Interface using Sephora Website data that allows users to search, sort, save, and retreived saved products</td>
+      </tr>
+      <tr>
+        <td>Photo needed</td>
+        <td>Activity Tracking Sensor Analysis (Time Series)</td>
+        <td>Python, Sci-kit Learn, Pandas, Numpy</td>
+        <td>Applying Machine Learning models to make prediction</td>
+      </tr>
+    </table>
+    </div>
+  </div>
+
+  <br>
+
+    <div class="noncoding_projects_table">
+      <h3>Here are some of the non-coding projects that I did.</h3>
+      <table id="dining">
+        <tr>
+          <th>Image</th>
+          <th>Project</th>
+          <th>Tools/Programming Language</th>
+          <th>Detail Description</th>
+        </tr>
+        <tr>
+          <td><img src="images/welcoming_newstudents.png" alt="coding-project" style="width:300px;"></td>
+          <td>US Election Interective Visualization Website</td>
+          <td>RShiny, ggplot2, tidyverse, dplyr</td>
+          <td>Create a website using RShiny package in RStudio to display a visualizations of US Election throughout 1900s-2020</td>
+        </tr>
+        <tr>
+          <td>Sephora Website</td>
+          <td>Coding Project</td>
+          <td>Java, MySQL, JDBC</td>
+          <td>Create a User Interface using Sephora Website data that allows users to search, sort, save, and retreived saved products</td>
+        </tr>
+        <tr>
+          <td>New Students Welcoming Postings</td>
+          <td>Non-Coding Project</td>
+          <td>iBis Paint, Photoshop</td>
+          <td>Design posting about everything that new students should know before coming to school</td>
+        </tr>
+        <tr>
+          <td>Activity Tracking Sensor Analysis (Time Series)</td>
+          <td>Coding Project</td>
+          <td>Python, Sci-kit Learn, Pandas, Numpy</td>
+          <td>...</td>
+        </tr>
+      </table>
+      </div>
   
   <div id="socialmedia">
-  <h2 style="text-align:center;color: #f09a91">Find more on social media</h2>
+  <h2 style="text-align:center;">Find more on social media</h2>
     <div id="socialmini">
   <a id="media1" href="https://www.facebook.com/MiamiUniversity/">Facebook</a>
   <a id="media2" href="https://www.instagram.com/miamiuniversity/?hl=en">Instagram</a>

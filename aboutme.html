@@ -2,25 +2,29 @@
 <html lang="en">
 
 <head>
-<link rel="stylesheet" type="text/css" href="/Users/mthuw/Documents/GitHub/ThuLe/styles.css">
-  <script src="https://kit.fontawesome.com/dd85575d2e.js" crossorigin="anonymous"></script>
-  <title style="color: white; font-family: 'TAN-MON CHERI', 'Times New Roman', Times, serif;">Thu Le</title>  
-</head>
+  <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/dd85575d2e.js" crossorigin="anonymous"></script>
+    <title style="color: white; font-family: Arial, Helvetica, sans-serif, sans-serif;">About Me</title>  
+  </head>
   
 <body>
-  <div id="tabline">
-    <a class="tab">HOME</a>
-    <a class="tab">ABOUT ME</a>
-    <a class="tab">MY PROJECTS</a>
-      </div>
-    </div>  
+  <nav id="tabline">
+    <a href="index.html" class="tab">HOME</a>
+    <a href="aboutme.html" class="tab">ABOUT ME</a>
+    <a href="projects.html"class="tab">MY PROJECTS</a>
+    <a href="materialize.html"class="tab">MATERIALIZE</a>
+    <a href="bonus.html"class="tab">VIETNAM PLACES</a>
+    <a href="jquery.html"class="tab">JQUERY</a>
+    <a href="bootstrap.html"class="tab">BOOTSTRAP</a>
+  </nav>
   <header>
-    <h1 id="booktitle" style="color: #844e6b; font-family: Georgia, 'Times New Roman', Times, serif;">About Me</h1>
+    <h1 id="booktitle">About Me</h1>
   </header>
-  <h2 style="color:darkred;">👋 Hey, it's Thu Le</h2>
-  
+
+  <div id="aboutme">
+  <h2>👋 Hey, it's Thu Le</h2>
   <section style="display: flex;"> 
-    <img src="/Users/mthuw/Documents/GitHub/ThuLe/images/IMG_5522.jpg" alt="myphoto" style="width:300px;">
+    <img src="images/me.jpg" alt="myphoto" style="width:300px;">
     <div id="me">
       <ul>
         <li>I am a junior majoring in Data Science & Statistics with a minor in ETBD. Just recently, during the winter break, 
@@ -34,11 +38,53 @@
       Asian countries, people usually put on national costumes and go around the city to take photos.</p>
     </div>
   </section>
+</div>
+
   <hr>
-  
+
+  <h2>My Involvement</h2>
+    <h3>These are some student orgs at Miami University that I have been a part of.</h3>
+    <ul>
+      <li>Vietnamese Student Association (VSA)</li>
+      <li>Asian American Association (AAA)</li>
+      <li>Scholar Leaders 2023-2024</li>
+      <li>Seoul in Miami (SeMi - Dance Team)</li>
+      <li>Miami Metrics (Data Science club)</li>
+    </ul>
+
+  <h2>What I Did In Each Org?</h2>
+    <h3>I just want to note down what have I done in each org.</h3>
+    <p><i>Note: The org name will be in <u>abbreviation.</u></i></p>
+    <table id="dining">
+      <tr>
+        <th>Org Name</th>
+        <th>My Role</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>VSA</td>
+        <td>Vice President</td>
+        <td>Hosting some events to promote Vietnamese culture, working on contracts to invite performers from outside the school, etc.</td>
+      </tr>
+      <tr>
+        <td>AAA</td>
+        <td>Member</td>
+        <td>Participating to perform at annual biggest cultural event "Fusion", co-hosting a food event from multiple countries, etc.</td>
+      </tr>
+      <tr>
+        <td>Scholar Leaders</td>
+        <td>Member</td>
+        <td>Hosting events for scholar leaders, doing social works and volunteer every month</td>
+      </tr>
+      <tr>
+        <td>SeMi</td>
+        <td>Member</td>
+        <td>Participating in dance team to perform at University of Cincinnati</td>
+      </tr>
+    </table>
   
   <div id="socialmedia">
-  <h2 style="text-align:center;color: #f09a91">Find more on social media</h2>
+  <h2 style="text-align:center;">Find more on social media</h2>
     <div id="socialmini">
   <a id="media1" href="https://www.facebook.com/MiamiUniversity/">Facebook</a>
   <a id="media2" href="https://www.instagram.com/miamiuniversity/?hl=en">Instagram</a>
